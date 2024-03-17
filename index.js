@@ -6,7 +6,7 @@ require("./db/pripojenie");
 const app = express();
 
 //"192.168.137.50" - LacikoNemaData Siet
-const port = 80;
+const PORT = process.env.PORT;
 
 // Middleware
 app.use(express.json());
@@ -19,8 +19,8 @@ const profile_route = require("./routes/profile");
 app.use("/profile", profile_route);
 
 try {
-  app.listen(port, () => {
-    console.log(`Server is running on a port ${port}`);
+  app.listen(PORT, () => {
+    console.log(`Server is running on a port ${PORT}`);
   });
 } catch (error) {
   console.log(error);
