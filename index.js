@@ -6,7 +6,6 @@ require("./db/pripojenie");
 const app = express();
 
 //"192.168.137.50" - LacikoNemaData Siet
-const host = "192.168.169.50";
 const port = 80;
 
 // Middleware
@@ -21,7 +20,7 @@ app.use("/profile", profile_route);
 
 try {
   app.listen(port, () => {
-    console.log(`Server is running on http://${host}:${port}`);
+    console.log(`Server is running on http://localhost:${port}`);
   });
 } catch (error) {
   console.log(error);
