@@ -20,7 +20,7 @@ app.use("/profile", profile_route);
 
 try {
   app.listen(port, () => {
-    console.log(`Server is running on http://localhost:${port}`);
+    console.log(`Server is running on a port ${port}`);
   });
 } catch (error) {
   console.log(error);
